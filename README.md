@@ -35,13 +35,15 @@ example `.pre-commit-config.yaml`:
 
 ### Notes about the `detekt` hook
 
-The default ruleset used is [ruleset.xml](https://github.com/dustinsand/pre-commit-jvm/detekt-config.yml).
+The default ruleset used is [detekt-config.yml](https://github.com/dustinsand/pre-commit-jvm/detekt-config.yml).
 
 To specify a custom ruleset, simply pass the argument to the hook:
 
+**TODO**
+
 ```yaml
-    - id: pmd
-      args: ["-R", "custom_ruleset.yml"]
+    - id: detekt
+      args: ["-c", "custom_detekt-config.yml"]
 ```
 
 Other [CLI](https://arturbosch.github.io/detekt/cli.html) arguments are also supported.
