@@ -99,9 +99,6 @@ complexity:
   MethodOverloading:
     active: false
     threshold: 6
-  NamedArguments:
-    active: false
-    threshold: 3
   NestedBlockDepth:
     active: true
     threshold: 4
@@ -489,9 +486,6 @@ potential-bugs:
     ignoreOnClassesPattern: ''
   MapGetWithNotNullAssertionOperator:
     active: false
-  MissingWhenCase:
-    active: true
-    allowElseExpression: true
   NullableToStringCall:
     active: false
   RedundantElseInWhen:
@@ -609,8 +603,6 @@ style:
   ProtectedMemberInFinalClass:
     active: true
   RedundantExplicitType:
-    active: false
-  RedundantHigherOrderMapUsage:
     active: false
   RedundantVisibilityModifierRule:
     active: false
