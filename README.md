@@ -21,7 +21,7 @@ example `.pre-commit-config.yaml`:
 
 ```yaml
 - repo: https://github.com/dustinsand/pre-commit-jvm
-  rev: v0.0.1  # Use the ref you want to point at
+  rev: v0.0.1
   hooks:
     - id: detekt
 ```
