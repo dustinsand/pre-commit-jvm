@@ -1,13 +1,13 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/dustinsand/pre-commit-jvm)
 
-pre-commit-java
+pre-commit-jvm
 ===============
 
-A collection of git hooks for Java to be used with the [pre-commit framework](http://pre-commit.com).
+A collection of git hooks for Kotlin to be used with the [pre-commit framework](http://pre-commit.com).
 
 ## Requirements
 
-pre-commit-java requires the following to run:
+pre-commit-jvm requires the following to run:
 
   * [pre-commit](http://pre-commit.com)
   * [Docker](https://www.docker.com)
@@ -24,7 +24,6 @@ example `.pre-commit-config.yaml`:
   rev: v0.0.1  # Use the ref you want to point at
   hooks:
     - id: detekt
-      exclude: /test/
 ```
 
 ## Available Hooks
