@@ -1,3 +1,4 @@
+---
 - id: detekt
   name: detekt
   description: "Runs the Detekt static code analyzer."

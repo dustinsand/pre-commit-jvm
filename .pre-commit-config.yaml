@@ -1,3 +1,4 @@
+---
 repos:
   - repo: git://github.com/pre-commit/pre-commit-hooks
     rev: v3.3.0
@@ -7,11 +8,6 @@ repos:
       - id: trailing-whitespace
       - id: check-case-conflict
       - id: check-merge-conflict
-      - id: check-executables-have-shebangs
-  - repo: git://github.com/adrienverge/yamllint
-    rev: v1.25.0
-    hooks:
-      - id: yamllint
   - repo: https://github.com/pryorda/dockerfilelint-precommit-hooks
     rev: v0.1.0
     hooks:
