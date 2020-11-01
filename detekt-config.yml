@@ -228,7 +228,7 @@ exceptions:
       - RuntimeException
 
 formatting:
-  active: true
+  active: false
   android: false
   autoCorrect: true
   AnnotationOnSeparateLine:
