@@ -1,7 +1,16 @@
 #!/bin/bash
 
+# find the index of the first parameter with a Kotlin file path
+idx=1
+for (( i=1; i <= "$#"; i++ )); do
+    if [[ ${!i} == *.kt ]]; then
+        idx=${i}
+        break
+    fi
+done
+
 # add default config arguments if not specified
-detekt_args="${@:2}"
+detekt_args="${*:1:idx-1}"
 if [[ detekt_args != *"--auto-correct "* ]] && [[ detekt_args != *"-ac "* ]]; then
   detekt_args="$detekt_args --auto-correct"
 fi
