@@ -36,11 +36,11 @@ example `.pre-commit-config.yaml`:
 
 The default ruleset used is [detekt-config.yml](https://github.com/dustinsand/pre-commit-jvm/detekt-config.yml).
 
-To specify a custom ruleset, simply pass the argument to the hook:
+To specify a custom detekt configuration, simply pass the argument to the hook:
 
 ```yaml
     - id: detekt
-      args: ["--config", "custom_detekt-config.yml"]
+      args: [--config custom-detekt-config.yml]
 ```
 
 Other [CLI](https://arturbosch.github.io/detekt/cli.html) arguments are also supported.
