@@ -3,7 +3,7 @@
 pre-commit-jvm
 ===============
 
-A collection of git hooks for Kotlin to be used with the [pre-commit framework](http://pre-commit.com).
+A collection of git hooks for the JVM to be used with the [pre-commit framework](http://pre-commit.com). So far the collection only includes one hook for Kotlin.
 
 ## Requirements
 
