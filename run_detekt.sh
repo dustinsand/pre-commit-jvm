@@ -11,7 +11,7 @@ done
 
 # add minimum default config arguments if not specified
 detekt_args="${*:1:idx-1}"
-if [[ ! detekt_args == *"--config "* ]] && [[ ! detekt_args == *"-c "* ]]; then
+if [[ $detekt_args != *"--config"* && $detekt_args != *"-c "* ]]
   detekt_args="$detekt_args --config /opt/detekt/detekt-config.yml"
 fi
 
