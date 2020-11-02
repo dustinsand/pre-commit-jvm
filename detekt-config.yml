@@ -18,17 +18,17 @@ processors:
   active: true
   exclude:
   - 'DetektProgressListener'
-  # - 'FunctionCountProcessor'
-  # - 'PropertyCountProcessor'
-  # - 'ClassCountProcessor'
-  # - 'PackageCountProcessor'
-  # - 'KtFileCountProcessor'
+  - 'FunctionCountProcessor'
+  - 'PropertyCountProcessor'
+  - 'ClassCountProcessor'
+  - 'PackageCountProcessor'
+  - 'KtFileCountProcessor'
 
 console-reports:
   active: true
   exclude:
-    # - 'ProjectStatisticsReport'
-    # - 'ComplexityReport'
+    - 'ProjectStatisticsReport'
+    - 'ComplexityReport'
     - 'NotificationReport'
     - 'FindingsReport'
     #  - 'FileBasedFindingsReport'
