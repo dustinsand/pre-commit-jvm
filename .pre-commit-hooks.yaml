@@ -2,7 +2,8 @@
 - id: detekt
   name: detekt
   description: "Runs the Detekt static code analyzer."
-  language: script
-  entry: run_detekt.sh
+  language: coursier
+  entry: detekt
+  pass_filenames: false
   files: \.kt$
   require_serial: true

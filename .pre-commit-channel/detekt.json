@@ -1,0 +1,10 @@
+{
+  "mainClass" : "io.gitlab.arturbosch.detekt.cli.Main",
+  "repositories": [
+    "central",
+    "https://kotlin.bintray.com/kotlinx"
+  ],
+  "dependencies": [
+    "io.gitlab.arturbosch.detekt:detekt-cli:1.14.2"
+  ]
+}

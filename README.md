@@ -10,7 +10,6 @@ A collection of git hooks for Kotlin to be used with the [pre-commit framework](
 pre-commit-jvm requires the following to run:
 
   * [pre-commit](http://pre-commit.com)
-  * [Docker](https://www.docker.com)
 
 ## Install
 
@@ -40,7 +39,7 @@ To specify a custom detekt configuration, simply pass the argument to the hook:
 
 ```yaml
     - id: detekt
-      args: [--config custom-detekt-config.yml]
+      args: [--config, detekt-config.yml]
 ```
 
 Other [CLI](https://arturbosch.github.io/detekt/cli.html) arguments are also supported.
