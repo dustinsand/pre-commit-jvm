@@ -3,7 +3,7 @@
 pre-commit-jvm
 ===============
 
-A collection of git hooks for Kotlin to be used with the [pre-commit framework](http://pre-commit.com).
+A collection of git hooks for the JVM to be used with the [pre-commit framework](http://pre-commit.com). So far the collection only includes one hook for Kotlin.
 
 ## Requirements
 
@@ -33,7 +33,7 @@ example `.pre-commit-config.yaml`:
 
 ### Notes about the `detekt` hook
 
-The default ruleset used is [detekt-config.yml](https://github.com/dustinsand/pre-commit-jvm/detekt-config.yml).
+The default ruleset used is [detekt-config.yml](https://raw.githubusercontent.com/dustinsand/pre-commit-jvm/main/detekt-config.yml).
 
 To specify a custom detekt configuration, simply pass the argument to the hook:
 
