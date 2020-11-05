@@ -9,7 +9,7 @@ A collection of git hooks for the JVM to be used with the [pre-commit framework]
 
 pre-commit-jvm requires the following to run:
 
-  * [pre-commit](http://pre-commit.com)
+  * [pre-commit(2.8+)](http://pre-commit.com)
   * [Coursier](https://get-coursier.io/)
 
 ## Install
