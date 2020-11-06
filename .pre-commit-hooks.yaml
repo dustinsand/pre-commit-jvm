@@ -1,9 +1,17 @@
 ---
 - id: detekt
-  name: detekt
-  description: "Runs the Detekt static code analyzer."
+  name: Detekt
+  description: "Runs the Detekt static code analyzer on Kotlin source files."
   language: coursier
   entry: detekt
   pass_filenames: false
   files: \.kt$
+  require_serial: true
+- id: pmd
+  name: PMD
+  description: "Runs the PMD static code analyzer on Java source files."
+  language: coursier
+  entry: pmd
+  pass_filenames: false
+  files: \.java$
   require_serial: true

@@ -3,7 +3,7 @@
 pre-commit-jvm
 ===============
 
-A collection of git hooks for the JVM to be used with the [pre-commit framework](http://pre-commit.com). So far the collection only includes one hook for Kotlin.
+A collection of git hooks for the JVM to be used with the [pre-commit framework](http://pre-commit.com).
 
 ## Requirements
 
@@ -24,17 +24,17 @@ example `.pre-commit-config.yaml`:
   rev: vX.X.X
   hooks:
     - id: detekt
+    - id: pmd
 ```
 
 ## Available Hooks
 
 | Hook name       | Description                                                                                        |
 | --------------- | -------------------------------------------------------------------------------------------------- |
-| `detekt`           | Runs [Detekt](https://detekt.github.io/detekt/) static code analyzer.                                        |
+| `detekt`           | Runs [Detekt](https://detekt.github.io/detekt/) static code analyzer on Kotlin source files.                                        |
+| `pmd`           | Runs [PMD](https://pmd.github.io/) static code analyzer on Java source files.                                        |
 
 ### Notes about the `detekt` hook
-
-The default ruleset used is [detekt-config.yml](https://raw.githubusercontent.com/dustinsand/pre-commit-jvm/main/detekt-config.yml).
 
 To specify a custom detekt configuration, simply pass the argument to the hook:
 
@@ -44,3 +44,19 @@ To specify a custom detekt configuration, simply pass the argument to the hook:
 ```
 
 Other [CLI](https://arturbosch.github.io/detekt/cli.html) arguments are also supported.
+
+### Notes about the `pmd` hook
+
+Required arguments for the hook
+
+| Argument | Description |
+| -------- | -------------------------------------------- |
+| dir | Root directory for sources.                       |
+| rulesets | Comma separated list of ruleset names to use.| 
+
+```yaml
+    - id: pmd
+      args: [ -dir, src/main/java, -rulesets, pmd-ruleset.xml ]
+```
+
+Other [CLI](https://pmd.github.io/latest/pmd_userdocs_installation.html) arguments are also supported.

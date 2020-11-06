@@ -1,0 +1,9 @@
+{
+  "mainClass": "net.sourceforge.pmd.PMD",
+  "repositories": [
+    "central"
+  ],
+  "dependencies": [
+    "net.sourceforge.pmd:pmd-java:6.29.0"
+  ]
+}
