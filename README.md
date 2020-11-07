@@ -24,10 +24,13 @@ example `.pre-commit-config.yaml`:
   rev: vX.X.X
   hooks:
     - id: detekt
-    - id: google-java-formatter-jdk8
+      args: [--config, detekt-config.yml]
     - id: google-java-formatter-jdk11
+      args: [--replace, --set-exit-if-changed]
     - id: ktlint
+      args: [--format]
     - id: pmd
+      args: [ -rulesets, pmd-ruleset.xml, -language, java, -cache, .pmd/cache, -dir, src/main/java, -f, textcolor ]
 ```
 
 ## Available Hooks
