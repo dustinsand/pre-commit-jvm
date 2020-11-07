@@ -24,7 +24,8 @@ example `.pre-commit-config.yaml`:
   rev: vX.X.X
   hooks:
     - id: detekt
-    - id: google-java-formatter
+    - id: google-java-formatter-jdk8
+    - id: google-java-formatter-jdk11
     - id: ktlint
     - id: pmd
 ```
@@ -34,7 +35,8 @@ example `.pre-commit-config.yaml`:
 | Hook name       | Description                                                                                        |
 | --------------- | -------------------------------------------------------------------------------------------------- |
 | `detekt`           | Runs [Detekt](https://detekt.github.io/detekt/) static code analyzer on Kotlin source files. |
-| `google-java-formatter`           | Runs [Google Java Formatter](https://github.com/google/google-java-format) to reformat Java source code to comply with [Google Java Style](https://google.github.io/styleguide/javaguide.html). |
+| `google-java-formatter-jdk8`           | Runs [Google Java Formatter](https://github.com/google/google-java-format) to reformat Java source code to comply with [Google Java Style](https://google.github.io/styleguide/javaguide.html).  Minimum supported runtime version is JDK 8. |
+| `google-java-formatter-jdk11`           | Runs [Google Java Formatter](https://github.com/google/google-java-format) to reformat Java source code to comply with [Google Java Style](https://google.github.io/styleguide/javaguide.html).  Minimum supported runtime version is JDK 11. |
 | `ktlint`           | Runs [Ktlint](https://ktlint.github.io/) to lint and reformat Kotlin source code. |
 | `pmd`           | Runs [PMD](https://pmd.github.io/) static code analyzer on Java source files. |
 
@@ -49,12 +51,12 @@ To specify a custom detekt configuration, simply pass the argument to the hook:
 
 Other [CLI](https://arturbosch.github.io/detekt/cli.html) arguments are also supported.
 
-### Notes about the `google-java-formatter` hook
+### Notes about the `google-java-formatter-jdk[version]` hook
 
 Minimum required arguments for the hook:
 
 ```yaml
-    - id: google-java-formatter
+    - id: google-java-formatter-jdk[version]
       args: [--replace, --set-exit-if-changed]
 ```
 
@@ -62,6 +64,10 @@ Other [CLI](https://github.com/google/google-java-format) arguments are also sup
 
 You can also use Coursier to get the list of options.
 ```
+[JDK 8]
+cs launch com.google.googlejavaformat:google-java-format:1.7 -- --help
+
+[JDK 11+]
 cs launch com.google.googlejavaformat:google-java-format:1.9 -- --help
 ```
 

@@ -7,11 +7,19 @@
   pass_filenames: false
   files: \.kt$
   require_serial: true
-- id: google-java-formatter
+- id: google-java-formatter-jdk8
   name: Google Java Formatter
-  description: "Runs the Google Java Formatter on Java source files."
+  description: "Runs the Google Java Formatter on Java source files. Minimum supported runtime version is JDK 8."
   language: coursier
-  entry: google-java-format
+  entry: google-java-format-jdk8
+  pass_filenames: true
+  files: \.java$
+  require_serial: true
+- id: google-java-formatter-jdk11
+  name: Google Java Formatter
+  description: "Runs the Google Java Formatter on Java source files. Minimum supported runtime version is JDK 11."
+  language: coursier
+  entry: google-java-format-jdk11
   pass_filenames: true
   files: \.java$
   require_serial: true
