@@ -7,6 +7,22 @@
   pass_filenames: false
   files: \.kt$
   require_serial: true
+- id: google-java-formatter
+  name: Google Java Formatter
+  description: "Runs the Google Java Formatter on Java source files."
+  language: coursier
+  entry: google-java-format
+  pass_filenames: true
+  files: \.java$
+  require_serial: true
+- id: ktlint
+  name: ktlint
+  description: "Runs the ktlint linter and formatter on Kotlin source files."
+  language: coursier
+  entry: ktlint
+  pass_filenames: true
+  files: \.kt$
+  require_serial: true
 - id: pmd
   name: PMD
   description: "Runs the PMD static code analyzer on Java source files."

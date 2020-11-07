@@ -1,0 +1,10 @@
+{
+  "mainClass": "com.pinterest.ktlint.Main",
+  "launcherType": "assembly",
+  "repositories": [
+    "central"
+  ],
+  "dependencies": [
+    "com.pinterest:ktlint:0.39.0"
+  ]
+}

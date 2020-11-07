@@ -24,6 +24,8 @@ example `.pre-commit-config.yaml`:
   rev: vX.X.X
   hooks:
     - id: detekt
+    - id: google-java-formatter
+    - id: ktlint
     - id: pmd
 ```
 
@@ -31,8 +33,10 @@ example `.pre-commit-config.yaml`:
 
 | Hook name       | Description                                                                                        |
 | --------------- | -------------------------------------------------------------------------------------------------- |
-| `detekt`           | Runs [Detekt](https://detekt.github.io/detekt/) static code analyzer on Kotlin source files.                                        |
-| `pmd`           | Runs [PMD](https://pmd.github.io/) static code analyzer on Java source files.                                        |
+| `detekt`           | Runs [Detekt](https://detekt.github.io/detekt/) static code analyzer on Kotlin source files. |
+| `google-java-formatter`           | Runs [Google Java Formatter](https://github.com/google/google-java-format) to reformat Java source code to comply with [Google Java Style](https://google.github.io/styleguide/javaguide.html). |
+| `ktlint`           | Runs [Ktlint](https://ktlint.github.io/) to lint and reformat Kotlin source code. |
+| `pmd`           | Runs [PMD](https://pmd.github.io/) static code analyzer on Java source files. |
 
 ### Notes about the `detekt` hook
 
@@ -45,9 +49,41 @@ To specify a custom detekt configuration, simply pass the argument to the hook:
 
 Other [CLI](https://arturbosch.github.io/detekt/cli.html) arguments are also supported.
 
+### Notes about the `google-java-formatter` hook
+
+Minimum required arguments for the hook:
+
+```yaml
+    - id: google-java-formatter
+      args: [--replace, --set-exit-if-changed]
+```
+
+Other [CLI](https://github.com/google/google-java-format) arguments are also supported. 
+
+You can also use Coursier to get the list of options.
+```
+cs launch com.google.googlejavaformat:google-java-format:1.9 -- --help
+```
+
+### Notes about the `ktlint` hook
+
+Minimum required arguments for the hook:
+
+```yaml
+    - id: ktlint
+      args: [--format]
+```
+
+Other [CLI](https://ktlint.github.io/#getting-started) arguments are also supported. 
+
+You can also use Coursier to get the list of options.
+```
+cs launch com.pinterest:ktlint:0.39.0 -M com.pinterest.ktlint.Main -- --help
+```
+
 ### Notes about the `pmd` hook
 
-Required arguments for the hook
+Required arguments for the hook:
 
 | Argument | Description |
 | -------- | -------------------------------------------- |
