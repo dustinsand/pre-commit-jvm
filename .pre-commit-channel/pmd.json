@@ -4,6 +4,6 @@
     "central"
   ],
   "dependencies": [
-    "net.sourceforge.pmd:pmd-java:6.29.0"
+    "net.sourceforge.pmd:pmd-java:6.37.0"
   ]
 }
