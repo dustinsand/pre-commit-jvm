@@ -3,6 +3,6 @@
     "central"
   ],
   "dependencies": [
-    "com.google.googlejavaformat:google-java-format:1.13.0"
+    "com.google.googlejavaformat:google-java-format:1.15.0"
   ]
 }
