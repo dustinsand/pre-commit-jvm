@@ -5,6 +5,6 @@
     "central"
   ],
   "dependencies": [
-    "com.pinterest:ktlint:0.45.2"
+    "com.pinterest:ktlint:0.46.1"
   ]
 }
