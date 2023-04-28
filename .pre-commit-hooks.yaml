@@ -7,32 +7,10 @@
   pass_filenames: false
   files: \.kt$
   require_serial: true
-- id: google-java-formatter-jdk8
-  name: Google Java Formatter
-  description: "Runs the Google Java Formatter on Java source files. Minimum supported runtime version is JDK 8."
-  language: coursier
-  entry: google-java-format-jdk8
-  files: \.java$
-  require_serial: true
-- id: google-java-formatter-jdk11
-  name: Google Java Formatter
-  description: "Runs the Google Java Formatter on Java source files. Minimum supported runtime version is JDK 11."
-  language: coursier
-  entry: google-java-format-jdk11 -J--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED -J--add-exports=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED -J--add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED -J--add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED -J--add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED -J--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
-  files: \.java$
-  require_serial: true
 - id: ktlint
   name: ktlint
   description: "Runs the ktlint linter and formatter on Kotlin source files."
   language: coursier
   entry: ktlint
   files: \.kt$
-  require_serial: true
-- id: pmd
-  name: PMD
-  description: "Runs the PMD static code analyzer on Java source files."
-  language: coursier
-  entry: pmd
-  pass_filenames: false
-  files: \.java$
   require_serial: true

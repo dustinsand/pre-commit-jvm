@@ -1,8 +1,0 @@
-{
-  "repositories": [
-    "central"
-  ],
-  "dependencies": [
-    "com.google.googlejavaformat:google-java-format:1.7"
-  ]
-}

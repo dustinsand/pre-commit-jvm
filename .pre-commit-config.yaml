@@ -1,14 +1,8 @@
 ---
 repos:
-  - repo: git://github.com/pre-commit/pre-commit-hooks
-    rev: v3.3.0
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
     hooks:
+      - id: check-json
+      - id: check-toml
       - id: check-yaml
-      - id: end-of-file-fixer
-      - id: trailing-whitespace
-      - id: check-case-conflict
-      - id: check-merge-conflict
-  - repo: https://github.com/pryorda/dockerfilelint-precommit-hooks
-    rev: v0.1.0
-    hooks:
-      - id: dockerfilelint
