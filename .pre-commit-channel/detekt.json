@@ -4,6 +4,6 @@
     "central"
   ],
   "dependencies": [
-    "io.gitlab.arturbosch.detekt:detekt-cli:1.22.0"
+    "io.gitlab.arturbosch.detekt:detekt-cli:1.23.1"
   ]
 }
